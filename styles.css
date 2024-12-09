@@ -1,0 +1,260 @@
+/* importando fonte poppins do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* /importando fonte poppins do google fonts */
+
+/* setando cores do projeto */
+:root {
+    --main-color: #00eeff;
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --color-00: #0000001a;
+}
+/* /setando cores do projeto */
+
+/* Resetando a pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+/* /Resetando a pagina */
+
+/* Fonte e tamanho da fonte em toda a pagina */
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+/* /Fonte e tamanho da fonte em toda a pagina */
+
+/* Cor de fundo e das letras */
+body {
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+/* Cor de fundo e das letras */
+
+/* estilos do menu principal */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background-color: var(--bg-color-02);
+    border-radius: 5px;
+}
+/* /estilos do menu principal */
+
+/* espaçamento do painel nav */
+.nav {
+    margin-left: 45.2rem;
+}
+/* /espaçamento do painel nav */
+
+/* estilos do logo (portfolio) */
+.logo {
+    font-size: 1.7rem;
+    color: var(--main-color);
+    font-weight: 600;
+    cursor: default;
+    margin-left: 1rem
+}
+/* /estilos do logo (portfolio) */
+
+/* estilos de todas class (a) */
+.a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+/* /estilos de todas class (a) */
+
+/* efeito hover */
+.a:hover {
+    color: var(--main-color);
+}
+/* /feito hover */
+
+/* estilos de todas class (section) */
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+}
+/* /estilos de todas class (section) */
+
+/* cor da fonte nas spans */
+span {
+    color: var(--main-color);
+}
+/* /cor da fonte nas spans */
+
+/* estilos da primeira section inicio */
+.inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inicio-conteudo, .sobre-conteudo {
+    width: 50%;
+}
+
+.inicio-conteudo h1, .sobre-conteudo h1 {
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 2.7rem;
+}
+
+.inicio-conteudo h3, .sobre-conteudo h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.inicio-conteudo p, .sobre-conteudo p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+/* /estilos da primeira section inicio */
+
+/* estilos da segunda section portfolio */
+.portfolio h2,
+.contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.portfolio {
+    background-color: var(--bg-color-01);
+}
+
+.portfolio-conteudo {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: auto auto;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    transition: 0.5s ease;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-camada {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(30rem);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-camada {
+    transform: translateY(0);
+}
+
+.portfolio-camada h4{
+    font-size: 2rem;
+}
+/* /estilos da segunda section portfolio */
+
+/* estilo da tag form */
+form {
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form .caixa-entrada {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .caixa-entrada input,
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color-02);
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+/* /estilo da tag form */
+
+form textarea {
+    resize: none;
+}
+
+/* estilos da class social(links de redes sociais) */
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1.8rem 0.5rem;
+    transition: 0.5 ease;
+}
+/* /estilos da class social(links de redes sociais) */
+
+/* estilos da class sobre */
+.sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* /estilos da class sobre */
+
+/* estilos da class btn (botoes) */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+    margin-top: 1.2rem;
+}
+/* /estilos da class btn (botoes) */
